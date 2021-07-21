@@ -18,18 +18,16 @@ class UsersList extends React.Component {
 
     const usersPerPage = 3;
 
-    const [...copyUsers] = users;
-
-    const startIndex = (currentPage - 1) * usersPerPage;
+    const startIndex = currentPage * usersPerPage;
     const endIndex = startIndex + usersPerPage;
-    const usersToDisplay = copyUsers.sort((a, b) => a.age - b.age).slice(startIndex, endIndex);
+    const usersToDisplay = users.slice(startIndex, endIndex);
 
     return (
       <div>
         <Pagination
           goPrev={this.goPrev}
           goNext={this.goNext}
-          currentPage={currentPage}
+          currentPage={currentPage + 1}
           totalItems={users.length}
           itemsPerPage={usersPerPage}
         />
@@ -45,7 +43,7 @@ class UsersList extends React.Component {
 
 const mapState = state => ({
   users: state.users.usersList,
-  currentPage: state.users.currentPage + 1,
+  currentPage: state.users.currentPage,
 });
 
 const mapDispatch = {
