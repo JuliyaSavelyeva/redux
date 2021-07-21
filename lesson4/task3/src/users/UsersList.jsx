@@ -45,7 +45,7 @@ class UsersList extends React.Component {
 
 const mapState = state => ({
   users: state.users.usersList,
-  currentPage: state.users.currentPage,
+  currentPage: state.users.currentPage + 1,
 });
 
 const mapDispatch = {
