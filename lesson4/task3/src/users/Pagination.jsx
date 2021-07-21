@@ -6,22 +6,13 @@ const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage }) =
 
   return (
     <div className="pagination">
-      {isPrevPageAvailbale ? (
-        <button className="btn" onClick={goPrev}>
-          ←
-        </button>
-      ) : (
-        <button className="btn" onClick={goPrev} disabled={true}></button>
-      )}
+      <button className="btn" onClick={goPrev} disabled={!isPrevPageAvailbale}>
+        {isPrevPageAvailbale && '←'}
+      </button>
       <span className="pagination__page">{currentPage}</span>
-
-      {isNextPageAvailbale ? (
-        <button className="btn" onClick={goNext}>
-          →
-        </button>
-      ) : (
-        <button className="btn" onClick={goNext} disabled={true}></button>
-      )}
+      <button className="btn" onClick={goNext} disabled={!isNextPageAvailbale}>
+        {isNextPageAvailbale && '→'}
+      </button>
     </div>
   );
 };
