@@ -1,4 +1,4 @@
-import { getWeatherData } from './weather.gateway.js';
+import { fetchWeatherData } from './weather.gateway.js';
 
 export const GET_WEATHER_DATA = 'GET_WEATHER_DATA';
 
@@ -9,9 +9,9 @@ export const getData = weatherData => ({
   },
 });
 
-export const fetchWeatherData = () => {
+export const getWeatherData = () => {
   return function (dispatch) {
-    getWeatherData().then(data => {
+    fetchWeatherData().then(data => {
       dispatch(getData(data));
     });
   };
