@@ -16,19 +16,3 @@ const Options = ({ title, options, moveOption }) => (
 );
 
 export default Options;
-
-// <!-- TransferList -->
-// <div class="transfer-list">
-//   <!-- AvailableOption -->
-//   <!-- Options -->
-//
-//   <!-- SelectedOption -->
-//   <!-- Options -->
-//   <div class="options">
-//     <div class="options__title">Selected options</div>
-//     <ul class="options__list">
-//       <li><button class="options__list-item">Leather-trimmed Sport Seats</button></li>
-//       <li><button class="options__list-item">Daytime running lights</button></li>
-//     </ul>
-//   </div>
-// </div>

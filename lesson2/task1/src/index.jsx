@@ -27,6 +27,7 @@ export const store = createStore(counterReducer);
 store.dispatch(increment());
 store.dispatch(increment());
 store.dispatch(increment());
+store.dispatch(increment());
 store.dispatch(decrement());
 
 console.log(store.getState());
